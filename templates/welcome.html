@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="{% if request.path == '/welcome/' %} active {% endif %} "><a href="/">Home</a></li>
+                <li class="{% if request.path == '/about/' %} active {% endif %} "><a href="/about">About</a></li>
+                <li class="{% if request.path == '/contact/' %} active {% endif %} "><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <h1 class="head">Welcome to Django Web Application</h1>
+
+    <div>
+        <img src="{{ img }}" class="img">
+    </div>
+    {% comment %} class="block animatable fadeIn" {% endcomment %}
+    <div>
+        <p class="details">{{ h1 }}<p>
+    </div>
+
+    <div>
+        <h1 class="hed">{{ heading }}</h1>
+        <p class="appli">{{ appli }}<p>  
+    </div>
+    <div>
+        <img src="{{ img2 }}" class="pic2">
+    </div>
+
+
+    <div>
+        <img src="{{ img3 }}" class="img">
+    </div>
+    {% comment %} class="block animatable fadeIn" {% endcomment %}
+    <div>
+        <p class="detail2">{{ h3 }}<p>
+    </div>
+
+
+<footer class="footer">
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+                <li><a href="/about">About</a></li>
+                <li><a href="/contact">Contact</a></li>
+        </ul>
+
+        <p class="trad">All Rights reserved by M.S Devs</p>
+    </nav>
+</footer>
+
+
+
+    <script src="/static/js/main.js"></script>
+    <script src="/static/js/script.js"></script>
+</body>
+</html>
