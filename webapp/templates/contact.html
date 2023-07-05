@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>{{ title }}</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="{% if request.path == '/' %} active {% endif %} "><a href="/">Back to login</a></li>
+                <li class="{% if request.path == '/about/' %} active {% endif %} "><a href="/about">About</a></li>
+                <li class="{% if request.path == '/calculator/' %} active {% endif %} "><a href="/calculator">Calculator</a></li>
+                <li class="{% if request.path == '/result/' %} active {% endif %} "><a href="/result">Result Counter</a></li>
+                <li class="{% if request.path == '/contact/' %} active {% endif %} "><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <h1 style="color:white; text-align:center;">Welcome to Contact Page</h1>
+
+    <p style="color:white; text-align:center;">This is a sample contact page.</p>
+
+    <ul style="color:white; text-align:center;">
+        {% for item in my_det %}
+            <li style="text-align:center;">{{ item }}</li>
+        {% endfor %}
+    </ul>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

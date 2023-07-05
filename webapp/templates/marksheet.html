@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Marksheet in Django</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" type="text/css" href="/static/css/login.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="{% if request.path == '/welcome/' %} active {% endif %} "><a href="/">Back to login</a></li>
+                <li class="{% if request.path == '/about/' %} active {% endif %} "><a href="/about">About</a></li>
+                <li class="{% if request.path == '/calculator/' %} active {% endif %} "><a href="/calculator">Calculator</a></li>
+                <li class="{% if request.path == '/result/' %} active {% endif %} "><a href="#">Result Counter</a></li>
+                <li class="{% if request.path == '/contact/' %} active {% endif %} "><a href="/contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <h1 style="color:white; margin-top:4%;">Result Calculator in (Django)</h1>
+
+    <div class="container">
+        <h1 style="color:white;">Result Calculator</h1>
+        <form method="POST">
+            {% csrf_token %}
+            {% comment %} {{ Form }} {% endcomment %}
+            <div class="form-group">
+                <label for="name" style="color:white;">Student Name :</label>
+                <input type="text" name="name" required>
+            </div>
+            <div class="form-group">
+                <label for="fname" style="color:white;">Father Name :</label>
+                <input type="text" name="fname" required>
+            </div>
+            <div class="form-group">
+                <label for="val1" style="color:white;">Subject 1 :</label>
+                <input type="text" name="val1" required>
+            </div>
+            <div class="form-group">
+                <label for="val2" style="color:white;">Subject 2 :</label>
+                <input type="text" name="val2" required>
+            </div>
+            <div class="form-group">
+                <label for="val3" style="color:white;">Subject 3 :</label>
+                <input type="text" name="val3" required>
+            </div>
+            <div class="form-group">
+                <label for="val4" style="color:white;">Subject 4 :</label>
+                <input type="text" name="val4" required>
+            </div>
+            <div class="form-group">
+                <label for="val5" style="color:white;">Subject 5 :</label>
+                <input type="text" name="val5" required>
+            </div>
+            <button type="submit" id="btn">Get Results</button>
+
+            <div>
+                <br>
+            </div>
+            <div class="form-group">
+                <label for="" style="color:white;">Final Result Card :</label>
+                <label for="name" style="color:white;">Student Name :</label>
+                <input type="text" value="{{Name}}">
+                <label for="fname" style="color:white;">Father Name :</label>
+                <input type="text" value="{{Fname}}" >
+                <label for="obt" style="color:white;">Obtained Marks :</label>
+                <input type="text" value="{{obtain}}" >
+                <label for="total" style="color:white;">Total Marks :</label>
+                <input type="text" value="{{total}}" >
+                <label for="perc" style="color:white;">Percentage :</label>
+                <input type="text" value="{{percentage}}" >
+                <label for="grade" style="color:white;">Awarded Grade :</label>
+                <input type="text" value="{{Grade}}" >
+            </div>
+        </form>
+    </div>
