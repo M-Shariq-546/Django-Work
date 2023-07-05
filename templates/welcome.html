@@ -8,14 +8,16 @@
     <header>
         <nav>
             <ul>
-                <li class="{% if request.path == '/welcome/' %} active {% endif %} "><a href="/">Home</a></li>
+                <li class="{% if request.path == '/welcome/' %} active {% endif %} "><a href="/">Back to Login</a></li>
                 <li class="{% if request.path == '/about/' %} active {% endif %} "><a href="/about">About</a></li>
+                <li class="{% if request.path == '/calculator/' %} active {% endif %} "><a href="/calculator">Calculator</a></li>
+                <li class="{% if request.path == '/result/' %} active {% endif %} "><a href="/result">Result Counter</a></li>
                 <li class="{% if request.path == '/contact/' %} active {% endif %} "><a href="/contact">Contact</a></li>
             </ul>
         </nav>
     </header>
     
-    <h1 class="head">Welcome to Django Web Application</h1>
+    <h1 class="head" style="color:white; margin-bottom:-3%;">Hey {{ users }}!! </h1><h1 class="head">Welcome to Django Web Application</h1>
 
     <div>
         <img src="{{ img }}" class="img">
