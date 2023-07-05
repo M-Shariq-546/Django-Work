@@ -28,7 +28,17 @@ input[type="password"] {
     padding: 5px;
     border-radius: 5px;
     border: 1px solid #ccc;
+    color:black;
 }
+
+#btn{
+    padding: 5px;
+    background-color: #45a049;
+    color: beige;
+    font-size: large;
+}
+
+
 
 button[type="submit"] {
     display: block;
